@@ -1,0 +1,16 @@
+CREATE TABLE alarms(
+    id SERIAL,
+		time VARCHAR(5) NOT NULL,
+		number VARCHAR(11) NOT NULL,
+		enabled BOOLEAN,
+		created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE calls(
+	last_made TIMESTAMPTZ NOT NULL
+);
+
+CREATE TABLE logs(
+	number VARCHAR(11) NOT NULL,
+	created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
